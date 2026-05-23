@@ -22,7 +22,8 @@ export function calculateCostPerDay(injectionInfo: InjectionInfo, budget: number
     const bulkDiscountApplies = injectionInfo.bulkDiscountMinimumVials * injectionInfo.vialPriceEuros <= budget;
     const pricePerVial = bulkDiscountApplies ? injectionInfo.vialPriceEuros - injectionInfo.bulkDiscountAmountEuros : injectionInfo.vialPriceEuros;
     const usedAmountPerInjection = injectionInfo.injectionAmountMg + injectionInfo.vialMgPerMl * deadspaceMl;
-    const injectionsPerVial = Math.floor(injectionInfo.vialMl / usedAmountPerInjection);
+    const totalVialMg = injectionInfo.vialMl * injectionInfo.vialMgPerMl;
+    const injectionsPerVial = Math.floor(totalVialMg / usedAmountPerInjection);
     const daysTheVialLastsFor = injectionsPerVial * injectionInfo.injectionFrequencyDays;
     const totalSupplyCostsPerVial = supplyCostsPerInjectionEuros * injectionsPerVial;
     const pricePerDay = (pricePerVial + totalSupplyCostsPerVial) / daysTheVialLastsFor;
