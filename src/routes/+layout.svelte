@@ -6,6 +6,10 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta content="IInjectFinance" property="og:title" />
+	<meta content="Injectable Estradiol Price Comparison Tool" property="og:description" />
+	<meta content="https://www.fag.homes/IInjectFinance" property="og:url" />
+	<meta content="#118C4F" data-react-helmet="true" name="theme-color">
 </svelte:head>
 
 {@render children()}
