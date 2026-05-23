@@ -9,3 +9,25 @@
 </svelte:head>
 
 {@render children()}
+
+<style>
+	:global(*) {
+		font-family: sans-serif;
+		color: #fff;
+		font-size: large;
+	}
+
+	:global(h1) {
+		font-size: 2rem;
+	}
+
+	:global(input) {
+		background-color: #4c4c5f;
+		border: 1px solid #6c6c7f;
+		border-radius: 3px;
+	}
+
+	:global(body) {
+		background-color: #2c2c3f;
+	}
+</style>
