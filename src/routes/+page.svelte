@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { calculateCostPerDay, defaultInjectionInfo, type InjectionInfo } from "$lib";
 	import InjectionInfoForm from "$lib/components/InjectionInfoForm.svelte";
-	import { onMount } from "svelte";
 
     let injectionA: InjectionInfo = $state(defaultInjectionInfo);
     let injectionB: InjectionInfo = $state(defaultInjectionInfo);
@@ -28,8 +27,8 @@
 <main>
     <h1>Injectable E Vials Price Comparer</h1>
     <forms-container>
-        <InjectionInfoForm bind:injectionInfo={injectionA} />
-        <InjectionInfoForm bind:injectionInfo={injectionB} />
+        <InjectionInfoForm bind:injectionInfo={injectionA} hideText={false} />
+        <InjectionInfoForm bind:injectionInfo={injectionB} hideText={true} />
     </forms-container>
     <form>
         <budget-form>
@@ -59,7 +58,11 @@
         display: flex;
         justify-content: space-evenly;
     }
-    
+
+    results-container {
+        width: 100%;
+    }
+
     results-container span {
         text-align: center;
         width: 50%;
