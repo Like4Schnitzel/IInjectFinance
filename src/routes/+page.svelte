@@ -41,6 +41,12 @@
         <span bind:this={priceASpan}>€{priceA.toFixed(3)}</span>
         <span bind:this={priceBSpan}>€{priceB.toFixed(3)}</span>
     </results-container>
+    <div class="sourceCodeLink">
+        <span>Source</span>
+        <a href="https://github.com/Like4Schnitzel/IInjectFinance/" title="Source Code" target="_blank" >
+            <img src="github_icon.svg" alt="GitHub Logo" />
+        </a>
+    </div>
 </main>
 
 <style>
@@ -81,5 +87,26 @@
 
     input {
         width: 4em;
+    }
+
+    .sourceCodeLink {
+        position: fixed;
+        bottom: 2rem;
+        left: 1rem;
+        height: 3rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+    
+    .sourceCodeLink a {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .sourceCodeLink a img {
+        border-radius: 50%;
+        background-color: black;
+        height: 100%;
+        width: 100%;
     }
 </style>
