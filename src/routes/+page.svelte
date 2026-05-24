@@ -6,7 +6,7 @@
     let injectionB: InjectionInfo = $state(defaultInjectionInfo);
     let budget: number = $state(100);
     let needleDeadspaceMl: number = $state(0.1);
-    let supplyCostPerInjectionEuros: number = $state(3);
+    let supplyCostPerInjectionEuros: number = $state(0.3);
 
     let priceA: number = $derived(calculateCostPerDay(injectionA, budget, needleDeadspaceMl, supplyCostPerInjectionEuros));
     let priceB: number = $derived(calculateCostPerDay(injectionB, budget, needleDeadspaceMl, supplyCostPerInjectionEuros));
