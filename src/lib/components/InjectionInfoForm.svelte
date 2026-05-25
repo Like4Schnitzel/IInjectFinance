@@ -75,6 +75,10 @@
         br {
             display: none;
         }
+
+        .griddy {
+            grid-template-columns: 2.6fr 0.1fr 0.5fr 1fr;
+        }
     }
 
 </style>
